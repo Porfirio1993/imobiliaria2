@@ -1,0 +1,13 @@
+﻿<Window x:Class="imobiliaria.Cadastro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:imobiliaria"
+        mc:Ignorable="d"
+        Title="Cadastro" Height="400" Width="500">
+    <Grid Margin="0,0,0,-6">
+        <Button x:Name="btnchamaimoveis" Content="Cadastro de Imoveis" Margin="60,104,60,195" Click="btnimoveis_Click"/>
+        <Button x:Name="btnchamacliente" Content="Cadastro de Cliente" Margin="60,223,60,76" Click="btncliente_Click"/>
+    </Grid>
+</Window>

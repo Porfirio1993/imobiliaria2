@@ -1,0 +1,40 @@
+﻿<Window x:Class="imobiliaria.cadimoveis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:imobiliaria"
+        mc:Ignorable="d"
+        Title="Cadastro Imoveis" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Label Content="Codigo" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.904,0.592" Height="26" Width="49"/>
+        <TextBox x:Name="txtcodigo" HorizontalAlignment="Left" Margin="75,14,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="46" Height="18" IsEnabled="False"/>
+        <Label Content="Endereço" HorizontalAlignment="Left" Margin="15,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="60"/>
+        <TextBox x:Name="txtEnd"  HorizontalAlignment="Left" Margin="75,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="455" Height="18"/>
+        <TextBox x:Name="txtnum"  HorizontalAlignment="Left" Margin="595,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="61" Height="18"/>
+        <Label Content="Número:" HorizontalAlignment="Left" Margin="530,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="60"/>
+        <Label Content="CEP:" HorizontalAlignment="Left" Margin="656,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="41"/>
+        <TextBox x:Name="txtcep"  HorizontalAlignment="Left" Margin="687,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="83" Height="18"/>
+        <TextBox x:Name="txtbairro" HorizontalAlignment="Left" Margin="61,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="122" Height="18"/>
+        <Label Content="Bairro: " HorizontalAlignment="Left" Margin="15,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="55"/>
+        <TextBox x:Name="txtvaloraluguel" HorizontalAlignment="Left" Margin="105,131,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="114" Height="18"/>
+        <Label Content="Valor Aluguel: " HorizontalAlignment="Left" Margin="15,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="92"/>
+        <TextBox x:Name="txtValorvenda" HorizontalAlignment="Left" Margin="317,131,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="114" Height="18"/>
+        <Label Content="Valor Venda: " HorizontalAlignment="Left" Margin="235,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="92"/>
+        <Label Content="Descrição: " HorizontalAlignment="Left" Margin="75,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="66"/>
+        <TextBox x:Name="txtdescricao" HorizontalAlignment="Left" Margin="75,184,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="695" Height="57"/>
+        <TextBox x:Name="txtfone" HorizontalAlignment="Left" Margin="522,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="114" Height="18"/>
+        <Label Content="Telefone: " HorizontalAlignment="Left" Margin="466,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="56"/>
+        <Button x:Name="btnGravar" Content="Gravar" Margin="74,519,633,10" Click="btnGravar_Click"/>
+        <Button x:Name="btnalterar" Content="Alterar" Margin="172,519,534,10" Click="btnalterar_Click"/>
+        <Button x:Name="btnlocalizar" Content="Localizar" Margin="270,519,436,10" Click="btnlocalizar_Click"/>
+        <Button x:Name="btnexcluir" Content="Excluir" Margin="369,519,339,10" Click="btnexcluir_Click"/>
+        <Button x:Name="btncancelar" Content="Cancelar" Margin="466,519,242,10" Click="btncancelar_Click"/>
+        <DataGrid x:Name="gridlist" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="75,257,146,82" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="gridlist_MouseDoubleClick"/>
+        <TextBox x:Name="txtcidade" HorizontalAlignment="Left" Margin="244,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="217" Height="18"/>
+        <Label Content="Cidade: " HorizontalAlignment="Left" Margin="194,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="50"/>
+        <Label Content="Proprietario/Cliente " HorizontalAlignment="Left" Margin="438,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="120"/>
+    </Grid>
+</Window>
