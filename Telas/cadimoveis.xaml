@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:imobiliaria"
         mc:Ignorable="d"
         Title="Cadastro Imoveis" Height="600" Width="800">
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
         <Label Content="Codigo" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.904,0.592" Height="26" Width="49"/>
@@ -32,7 +32,16 @@
         <Button x:Name="btnlocalizar" Content="Localizar" Margin="270,519,436,10" Click="btnlocalizar_Click"/>
         <Button x:Name="btnexcluir" Content="Excluir" Margin="369,519,339,10" Click="btnexcluir_Click"/>
         <Button x:Name="btncancelar" Content="Cancelar" Margin="466,519,242,10" Click="btncancelar_Click"/>
-        <DataGrid x:Name="gridlist" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="75,257,146,82" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="gridlist_MouseDoubleClick"/>
+        
+        <DataGrid x:Name="gridlist" Margin="75,257,146,82" 
+                  SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" SelectionMode="Single" 
+                  MouseDoubleClick="gridlist_MouseDoubleClick" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Endereço" Binding="{Binding rua}" />
+                <!--continuar colocando as informaçoes que deseja na grid dos imoveis-->                
+            </DataGrid.Columns>
+        </DataGrid>
+        
         <TextBox x:Name="txtcidade" HorizontalAlignment="Left" Margin="244,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="217" Height="18"/>
         <Label Content="Cidade: " HorizontalAlignment="Left" Margin="194,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="50"/>
         <Label Content="Proprietario/Cliente " HorizontalAlignment="Left" Margin="438,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="120"/>

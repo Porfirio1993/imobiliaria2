@@ -37,13 +37,13 @@ namespace imobiliaria
                 {
                     i = ctx.imoveis.Find(Convert.ToInt32(txtcodigo.Text));//indo no banco e buscando o cliente.
                     MessageBox.Show("Alterado com sucesso");
-                    this.ListarClientes();
+                    this.Listarimoveis();
                 }
                 else
                 {
                     i = new imoveis();
                     MessageBox.Show("Salvo com sucesso");
-                    this.ListarClientes();
+                    this.Listarimoveis();
                 }
                 i.rua = txtEnd.Text;
                 i.numero = Convert.ToInt32(txtnum.Text);//convertendo uma string em numero
@@ -60,7 +60,7 @@ namespace imobiliaria
                     ctx.imoveis.Add(i);//adicionando novo imovel.
                 }
                 ctx.SaveChanges();
-                this.ListarClientes();
+                this.Listarimoveis();
 
             }
         }
@@ -85,9 +85,9 @@ namespace imobiliaria
         }
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            this.ListarClientes();
+            this.Listarimoveis();
         }
-        private void ListarClientes()
+        private void Listarimoveis()
         {
             using (imobiliariaEntities1 ctx = new imobiliariaEntities1())
             {
@@ -110,7 +110,7 @@ namespace imobiliaria
                 {
                     MessageBox.Show("Favor selecionar imovel");
                 }
-                this.ListarClientes();
+                this.Listarimoveis();
             }
         }
 

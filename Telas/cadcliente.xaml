@@ -23,7 +23,11 @@
         <RadioButton Name="rbFunc" GroupName="tipoPessoa" Content="Funcionário" HorizontalAlignment="Left" Margin="572,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="15" Width="81" />
         <TextBox x:Name="txtsenha" HorizontalAlignment="Left" Margin="249,113,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="92" Height="18" MaxLength="4"/>
         <Label Content="Senha" HorizontalAlignment="Left" Margin="202,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="42"/>
-        <DataGrid x:Name="gridlist" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="74,213,147,126" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="gridlist_MouseDoubleClick"/>
+        
+        <DataGrid x:Name="gridlist" d:ItemsSource="{d:SampleData ItemCount=10}" 
+                  Margin="74,213,147,126" SelectionChanged="DataGrid_SelectionChanged"
+                  IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="gridlist_MouseDoubleClick"/>
+        
         <RadioButton x:Name="radimasc" Content="Masculino"  HorizontalAlignment="Left" Margin="225,77,0,0" VerticalAlignment="Top" Width="80" Height="15"/>
         <RadioButton x:Name="radiativo" Content="Ativo"  HorizontalAlignment="Left" Margin="375,115,0,0" VerticalAlignment="Top" Width="80" Height="15"/>
         <RadioButton x:Name="radidesativo" Content="Desativado"  HorizontalAlignment="Left" Margin="460,114,0,0" VerticalAlignment="Top" Width="80" Height="16"/>
