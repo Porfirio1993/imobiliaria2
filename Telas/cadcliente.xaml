@@ -15,7 +15,9 @@
         <Label Content="Nome" HorizontalAlignment="Left" Margin="15,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="43"/>
         <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="68,42,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="334" Height="18"/>
         <Label Content="CPF" HorizontalAlignment="Left" Margin="15,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="30"/>
-        <TextBox x:Name="txtCPF"  HorizontalAlignment="Left" Margin="68,77,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="131" Height="18"/>
+        <TextBox x:Name="txtCPF"  HorizontalAlignment="Left" Margin="68,77,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="131" Height="18"
+                 TextChanged="MaskedTextBox_TextChanged"/>
         <Label Content="Data de Nascimento" HorizontalAlignment="Left" Margin="417,39,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="118"/>
         <DatePicker x:Name="dtanascimento" HorizontalAlignment="Left" Margin="540,39,0,0" VerticalAlignment="Top" Width="113" Height="24"/>
         <Label Content="Tipo Pessoa:" HorizontalAlignment="Left" Margin="417,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="28" Width="76"/>

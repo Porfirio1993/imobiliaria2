@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,6 +79,14 @@ namespace imobiliaria
                     ctx.cliente.Add(c);
                 }
 
+                if (radiativo.IsChecked == true)
+                {
+                    c.status = true;
+                }
+                else
+                {
+                    c.status = false;
+                }
                 ctx.SaveChanges();
                 
                 this.LimpaCampos();
@@ -153,8 +162,8 @@ namespace imobiliaria
             using (imobiliariaEntities1 ctx = new imobiliariaEntities1())
             //convertendo a variavel consulta que é db para exibir em lista
             {
-                var consulta = ctx.cliente;
-                gridlist.ItemsSource = consulta.ToList();
+                var consulta = ctx.cliente.ToList();
+                gridlist.ItemsSource = consulta;
             }
             //importante: Quando colocar variavel var ela assumi o tipo quando recebe os dados.
         }
@@ -267,11 +276,35 @@ namespace imobiliaria
                 txtusuario.Text = c.login;
                 txtsenha.Text = c.senha;
                 dtanascimento.Text = c.data_nascimento.ToString();
-                
+                if(c.status == true)
+                {
+                    radiativo.IsChecked = true;
+                    radidesativo.IsChecked = false;
+                }
+                else
+                {
+                    radidesativo.IsChecked = true;
+                    radiativo.IsChecked = false;
+
+                }
+
                 //problema para exibir se esta ativo e se é masc ou fem
                 this.AlterarBotao(2);
             }
             //this.AlterarBotao(4);
+        }
+
+        void MaskedTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var txtbox  = sender as TextBox;
+            txtbox.CaretIndex = txtbox.Text.Length;
+            var txt = txtbox.Text.Replace(".","");
+            txt = txt.Replace("-","");
+
+            if (txtbox != null && txtbox.Text.Length > 0)
+            {
+                txtbox.Text = Convert.ToUInt64(txt).ToString(@"000\.000\.000\-00").PadLeft(11, '0');
+            }
         }
     }
 }

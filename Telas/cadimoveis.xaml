@@ -45,5 +45,7 @@
         <TextBox x:Name="txtcidade" HorizontalAlignment="Left" Margin="244,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="217" Height="18"/>
         <Label Content="Cidade: " HorizontalAlignment="Left" Margin="194,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="50"/>
         <Label Content="Proprietario/Cliente " HorizontalAlignment="Left" Margin="438,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.079,0.754" Height="26" Width="120"/>
+        <TextBox x:Name="txtCliente" HorizontalAlignment="Left" Margin="558,131,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="114" Height="18" MouseDoubleClick="txtCliente_MouseDoubleClick"/>
+
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -162,6 +163,19 @@ namespace imobiliaria
 
 
             }
+        }
+
+        private void txtCliente_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var winProp = new MainWindow();
+            winProp.ShowDialog();
+            winProp.Closed += Fechando;
+        }
+
+        private void Fechando(object sender, EventArgs e)
+        {
+            MainWindow winprop = (MainWindow)sender;
+            this.txtCliente.Text = winprop.txtNome.Text;
         }
     }
 }
